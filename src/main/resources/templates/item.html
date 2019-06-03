@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pastebin: [[${title}]] ([[${datetime}]])</title>
+</head>
+<body>
+    <div><a href="../">Pastebin: index</a> &gt; <a th:inline="text" th:href="@{./{id}(id=${id})}">[[${title}]] ([[${datetime}]])</a></div>
+    <div><pre><code>[[${body}]]</code></pre></div>
+</body>
+</html>
