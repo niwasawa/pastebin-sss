@@ -4,17 +4,17 @@ import java.io.Serializable;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import info.maigo.lab.pastebin.domain.NotIncludedControlCharacters;
+import info.maigo.lab.pastebin.domain.NotIncludedIllegalCharacters;
 
 public class PostForm implements Serializable {
 
     @NotEmpty
     @Size(min = 1, max = 256)
-    @NotIncludedControlCharacters
+    @NotIncludedIllegalCharacters
     private String title;
 
     @NotEmpty
-    @NotIncludedControlCharacters
+    @NotIncludedIllegalCharacters
     private String body;
 
     public String getTitle() {
